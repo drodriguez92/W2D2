@@ -7,7 +7,8 @@ class Queen < piece
   def symbol
     :queen
   end
-  
+
   def move_dirs
+    diagonal_dirs + horizontal_dirs
   end
 end

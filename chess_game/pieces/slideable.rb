@@ -36,7 +36,11 @@ module Slideable
     while check
       x , y  = x + dx, y + dy
 
-      if valid_pos?([x, y]) && board.grid[x][y].empty?
+      if valid_pos?([x, y]) == false
+        break
+      end
+
+      if board.grid[x][y].empty?
         moves << [x, y]
       elsif board.grid[x][y].color != color
         moves << [x, y]
